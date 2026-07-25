@@ -2,6 +2,19 @@
 
 Plataforma web para gerenciamento de consultas em clínicas de saúde mental, com papéis distintos para **Paciente**, **Secretária** e **Médico**.
 
+## Aviso
+
+Este projeto é disponibilizado "como está" (as-is), sem garantias de
+manutenção contínua, suporte técnico ou SLA. É open source sob licença
+MIT — você pode usar, modificar e fazer fork livremente, mas a
+responsabilidade por auditoria de segurança, conformidade com LGPD e
+operação em produção é de quem implanta o sistema.
+
+Pull requests e issues são bem-vindos, mas não há compromisso de prazo
+de resposta.
+
+
+
 ---
 
 ## Arquitetura
