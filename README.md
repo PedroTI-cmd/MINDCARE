@@ -1,4 +1,4 @@
-# MindCare — Sistema de Agendamento de Consultas
+# MindCare — Sistema de Agendamento de Consultas Open-Source
 
 Plataforma web para gerenciamento de consultas em clínicas de saúde mental, com papéis distintos para **Paciente**, **Secretária** e **Médico**.
 
