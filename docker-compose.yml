@@ -1,0 +1,47 @@
+version: "3.9"
+
+services:
+  web:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      FLASK_ENV: development
+      SECRET_KEY: dev-secret-change-in-production
+      DATABASE_URL: postgresql://mindcare:mindcare@db:5432/mindcare
+      RATELIMIT_STORAGE_URI: redis://redis:6379/0
+      SESSION_COOKIE_SECURE: "false"
+    volumes:
+      - .:/app
+      - ./instance:/app/instance
+    depends_on:
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_started
+    command: >
+      sh -c "flask db upgrade && flask seed-db && gunicorn wsgi:application
+             --workers 2 --bind 0.0.0.0:8000 --reload"
+
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: mindcare
+      POSTGRES_PASSWORD: mindcare
+      POSTGRES_DB: mindcare
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U mindcare"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  redis:
+    image: redis:7-alpine
+    volumes:
+      - redis_data:/data
+
+volumes:
+  postgres_data:
+  redis_data:

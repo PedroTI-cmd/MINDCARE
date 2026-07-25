@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}Acesso Negado - MindCare{% endblock %}
+{% block content %}
+<div class="row justify-content-center mt-5">
+    <div class="col-md-6 text-center">
+        <h1 class="display-1 fw-bold text-danger">403</h1>
+        <h2 class="mb-3">Acesso Negado</h2>
+        <p class="text-muted mb-4">Você não tem permissão para acessar esta página.</p>
+        <a href="{{ url_for('main.home') }}" class="btn btn-primary">Voltar ao Painel</a>
+    </div>
+</div>
+{% endblock %}

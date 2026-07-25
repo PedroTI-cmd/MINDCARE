@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}Muitas Requisições - MindCare{% endblock %}
+{% block content %}
+<div class="row justify-content-center mt-5">
+    <div class="col-md-6 text-center">
+        <h1 class="display-1 fw-bold text-warning">429</h1>
+        <h2 class="mb-3">Muitas Tentativas</h2>
+        <p class="text-muted mb-4">Você realizou muitas requisições em pouco tempo. Aguarde alguns instantes antes de tentar novamente.</p>
+        <a href="{{ url_for('auth.login') }}" class="btn btn-primary">Voltar ao Login</a>
+    </div>
+</div>
+{% endblock %}

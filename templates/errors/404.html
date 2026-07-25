@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}Página Não Encontrada - MindCare{% endblock %}
+{% block content %}
+<div class="row justify-content-center mt-5">
+    <div class="col-md-6 text-center">
+        <h1 class="display-1 fw-bold" style="color: var(--mc-secondary);">404</h1>
+        <h2 class="mb-3">Página Não Encontrada</h2>
+        <p class="text-muted mb-4">O recurso que você está procurando não existe ou foi movido.</p>
+        <a href="{{ url_for('main.home') }}" class="btn btn-primary">Voltar ao Painel</a>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,41 @@
+# Segredos — NUNCA versionar
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+.Python
+
+# Ambiente virtual
+.venv/
+venv/
+env/
+ENV/
+
+# Flask / SQLite
+instance/
+*.db
+
+# Logs
+logs/
+*.log
+
+# Cobertura de testes
+.coverage
+htmlcov/
+.pytest_cache/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# macOS
+.DS_Store

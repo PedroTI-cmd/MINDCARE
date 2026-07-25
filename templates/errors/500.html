@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}Erro Interno - MindCare{% endblock %}
+{% block content %}
+<div class="row justify-content-center mt-5">
+    <div class="col-md-6 text-center">
+        <h1 class="display-1 fw-bold text-danger">500</h1>
+        <h2 class="mb-3">Algo deu errado</h2>
+        <p class="text-muted mb-4">Ocorreu um erro interno no servidor. Nossa equipe foi notificada automaticamente. Por favor, tente novamente em alguns instantes.</p>
+        <a href="{{ url_for('main.home') }}" class="btn btn-primary">Voltar ao Painel</a>
+    </div>
+</div>
+{% endblock %}
