@@ -4,20 +4,10 @@
 
 | Versão | Suporte de segurança |
 |--------|----------------------|
-| última | ✅ Sim               |
+| última |  X Não               |
 
-## Relatando uma vulnerabilidade
 
-**Não abra um issue público** para reportar vulnerabilidades de segurança.
-
-Entre em contato diretamente pelo e-mail de segurança configurado para este projeto. Inclua:
-
-1. Descrição da vulnerabilidade
-2. Passos para reproduzir
-3. Impacto potencial
-4. Sugestão de correção (se houver)
-
-Comprometemo-nos a responder em até 48 horas e a publicar um patch, com crédito ao pesquisador, em até 7 dias para vulnerabilidades críticas.
+**abra um issue público** para reportar vulnerabilidades de segurança.
 
 ## Boas práticas para operadores
 
